@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@import url('reset.css');
+body{ background-color: #333;}
+.wrapper{width: 100%; height: auto;position: relative;}
+
+.header{position: fixed; left: 0; top: 0; z-index: 1000; width: 100%; height: 70px;}
+.header h1 a{display: block;float: left; color: #fff; line-height: 70px; margin-left: 5%;}
+.header ul { float: right; margin-right:5%;}
+.header ul li{float: left; margin-left: 40px; padding: 20px 0;}
+.header ul li a{display: block; font-weight: bold; font-size: 20px; color: #fff;line-height: 30px; height: 30px; text-shadow: 0px 0px 5px rgba(0,0,0,0.4);}
+
+.header.on{background-color: rgba(0,0,0,.4);}
+.header ul li:hover a{animation:textHover 0.5s linear infinite; }
+@keyframes textHover {
+  0%{text-shadow: -3px -3px 10px rgb(251,194,235)}
+  25%{text-shadow: 3px -3px 10px rgb(166,193,238)}
+  50%{text-shadow: 3px 3px 10px rgb(166,192,254)}
+  70%{text-shadow: -3px 3px 10px rgb(246,128,132)}
+  100%{text-shadow: -3px -3px 10px rgb(251,194,235);}
+}
+
+.homepage-hero-module{border-right: none; border-left: none; z-index:10;}
+.video-container {position: relative;  bottom: 0%; left: 0%; height: 100%; width: 100%; overflow: hidden; background: #000;}
+.video-container .poster img { width: 100%; bottom: 0; position: absolute;}
+
+.video-container video {position: absolute; bottom: 0;}
+.video-container video.fillWidth {width: 100%;}
+
+.no{width: 100%; height: 100%; position: absolute; left: 0; top: 0; color: #fff;}
+
+.no1{background: url(../img/nicolai-berntsen-9244.jpg) no-repeat; background-size: cover;}
+.no2{background: url(../img/anthony-delanoix-14635.jpg) no-repeat; background-size: cover;}
+.no-video .video-container video,.touch .video-container video {display: none;}
+.no-video .video-container .poster,.touch .video-container .poster { display: block !important;}
+.no3{background: url(../img/greyson-joralemon-186357.jpg) no-repeat;background-size: cover;}
+.no4{background: url(../img/philipp-henzler-411.jpg) no-repeat;background-size: cover;}
+
+.no span.bottom_arrow{position: absolute; bottom: 30px; left: 50%; margin-left: -15px;width:40px; height: 40px; background: url(../img/arrow_down.png) no-repeat; background-size: cover; animation: aniArrow 0.28s infinite alternate; }
+@keyframes aniArrow{
+  0%{transform: translateY(0px);}
+  100%{transform: translateY(10px);}
+}
+
+.no .textArea{position: absolute; right: 10%; width: 400px; bottom: 30%;  padding: 20px; }
+.no .textArea.black{background-color: rgba(0,0,0,0.5);}
+.no .textArea h2{margin-bottom: 15%; font-size: 30px;}
+.no .textArea p{line-height: 1.5}
+.no .textArea .button{margin-top: 15%; position: relative; overflow: hidden;}
+.no .textArea .button span{display: block; box-sizing: border-box;  border: 3px solid #fff; }
+.no .textArea .button span a{display: block;  height: 50px;  text-align: center;font-size: 24px; font-weight: bold; line-height: 45px; color: #fff; }
+.no .textArea .button span:hover a{ background-color: rgba(255,0255,0255,0.6); color: #333; }
+
+.no .textArea .button span.slide{background: url(../img/slide3.png) no-repeat; animation: movingSlide 3s infinite;height: 50px; opacity: 0.8;position: absolute; left: 0; top: 0; width: 50px; border:none;}
+@keyframes movingSlide{
+  0%{transform: translateX(-10px);}
+  100%{transform: translateX(400px);}}
+.no .textArea .button span.slide_button{ border:none; }
+.no .textArea .button span.slide_button a{background-color: rgba(255,0255,0255,0.6); color: #333; line-height: 45px;}
+.no .textArea .button span.glow{animation: textGlow 2s infinite;}
+@keyframes textGlow{
+  0%{text-shadow: 0px 0px 10px rgb(251,194,235)}
+  35%{text-shadow: 0px 0px 30px rgb(150,222,218)}
+  75%{text-shadow: 0px 0px 20px rgb(246,128,132)}
+  100%{text-shadow: 0px 0px 10px rgb(251,194,235)}}
+
+
+.blog_page{width: 100%; height: auto; display: none;}
+.blog_page{width: 100%;}
+.blog_page ul li{position: relative; overflow: hidden; float: left; width: 20%;/*height js에서 정의, window resizing 될때마다*/ }
+.blog_page ul li a{position: absolute; display: block; width: 120%; height: 120%; left: -10%; top: -10%; background-size: cover; transition: all 0.3s; background-repeat: no-repeat; background-position: center; }
+.blog_page ul li:nth-child(1) a{background-image:url(../img/img01.jpg)}
+.blog_page ul li:nth-child(2) a{background-image:url(../img/img02.jpg)}
+.blog_page ul li:nth-child(3) a{background-image:url(../img/img03.jpg)}
+.blog_page ul li:nth-child(4) a{background-image:url(../img/img04.jpg)}
+.blog_page ul li:nth-child(5) a{background-image:url(../img/img05.jpg)}
+.blog_page ul li:nth-child(6) a{background-image:url(../img/img06.jpg)}
+.blog_page ul li:nth-child(7) a{background-image:url(../img/img07.jpg)}
+.blog_page ul li:nth-child(8) a{background-image:url(../img/img08.jpg)}
+.blog_page ul li:nth-child(9) a{background-image:url(../img/img09.jpg)}
+.blog_page ul li:nth-child(10) a{background-image:url(../img/img10.jpg)}
+.blog_page ul li:nth-child(11) a{background-image:url(../img/img11.jpg)}
+.blog_page ul li:nth-child(12) a{background-image:url(../img/img12.jpg)}
+.blog_page ul li:nth-child(13) a{background-image:url(../img/img13.jpg)}
+.blog_page ul li:nth-child(14) a{background-image:url(../img/img14.jpg)}
+.blog_page ul li:nth-child(15) a{background-image:url(../img/img15.jpg)}
+.blog_page ul li:nth-child(16) a{background-image:url(../img/img16.jpg)}
+.blog_page ul li:nth-child(17) a{background-image:url(../img/img17.jpg)}
+.blog_page ul li:nth-child(18) a{background-image:url(../img/img18.jpg)}
+.blog_page ul li:nth-child(19) a{background-image:url(../img/img19.jpg)}
+.blog_page ul li:nth-child(20) a{background-image:url(../img/img20.jpg)}
+.blog_page ul li:nth-child(21) a{background-image:url(../img/img21.jpg)}
+.blog_page ul li:nth-child(22) a{background-image:url(../img/img22.jpg)}
+.blog_page ul li:nth-child(23) a{background-image:url(../img/img23.jpg)}
+.blog_page ul li:nth-child(24) a{background-image:url(../img/img24.jpg)}
+.blog_page ul li:nth-child(25) a{background-image:url(../img/img25.jpg)}
+
+/*.blog_page ul li:hover a{transform: scale(0.83);}*/
+.blog_page ul li div.blog{position: absolute; z-index: 10; left: 7%; top: 7%; width: 86%; height: 86%; border: 15px solid rgba(255,255,255,0.6); padding: 20px; background-color: rgba(255,255,255,0.6); background-origin:content-box; background-clip:content-box;  box-sizing: border-box; display: none;}
+.blog_page ul li div.blog h2{font-size: 15px; text-align: center; }

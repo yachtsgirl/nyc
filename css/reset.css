@@ -1,0 +1,14 @@
+/* RESET CSS */
+* {margin: 0; padding: 0;}
+ul{ list-style: none;}
+a{ text-decoration: none; color: #333;}
+.clearfix::before, .clearfix::after{content: ""; display: block;}
+.clearfix::after{clear: both;}
+img{vertical-align: top;}
+table{border-spacing: 0; border-collapse: collapse;}
+address{font-style: normal;}
+.hidden{display: none;}
+fieldset{border:none;}
+
+
+header,aside,nav,menu,section,footer,article{display: block;}/* html5 IE low version */
